@@ -1,6 +1,5 @@
 // eslint-disable-next-line global-require
-const remarkPlugins = [require(`remark-slug`)]
-
+const remarkPlugins = [require(`remark-slug`)];
 module.exports = {
   siteMetadata: {
     siteTitle: `Specimens for Design Systems - @lekoarts/gatsby-theme-specimens`,
@@ -60,5 +59,15 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
+    "gatsby-plugin-route-dictionary",
+    {
+      resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
+      options: {
+        analyzerMode: "static",
+        reportFilename: "_bundle.html",
+        openAnalyzer: false,
+      },
+    },
+    "gatsby-disable-prefetch",
   ],
-}
+};
